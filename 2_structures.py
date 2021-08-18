@@ -12,7 +12,7 @@ frozenset({1,2})	#frozenset
 - Изменяемый
 - Хранит данные по принципу ключ-значение.
 - Содержит любые типы данных
-- Подробнее про словари - https://pythonworld.ru/tipy-dannyx-v-python/slovari-dict-funkcii-i-metody-slovarej.html
+	- Подробнее про словари - https://pythonworld.ru/tipy-dannyx-v-python/slovari-dict-funkcii-i-metody-slovarej.html
 """
 
 # Значением  может быть все, что угодно.
@@ -56,7 +56,7 @@ del weather_info["new_field"]
 user = {"username": "Egor",
 		"city": "Kyiv",
 		"birthdate":"01.05.1994",
-		"phones":{"sim1":{"operator":"MTC","phone_number": "+232322322333333"}
+		"phones":{"sim1":{"operator":"MTC","phone_number": "+232322322333333"},
           		  "sim2":{"operator":"A1", "phone_number": "+12121212122"}
 		}}
 
@@ -148,7 +148,7 @@ songs.remove(1)
 # Как удалить элемент по индексу(номеру позиции в списке):
 del songs[1]
 
-
+	
 # Два списка можно объеденить:
 another_songs = [{"artist":"Порнофильмы", "name": "Мы вам не верим", "band": True}
 				 {"artist":"ДДТ", "name": "Не стреляй!", "band":True}]
@@ -157,7 +157,7 @@ print(songs + another_songs)
 
 
 ####################### ТУПЛИ (КОРТЕЖИ) ###########################
-
+0
 """ 
 - Обозначается как (), либо без скобок, перечисляя элементы через запятую.
 - Неизменяемый.
@@ -187,7 +187,7 @@ test_set = {1,1,1, "Hello"} # в результате будет {1, "Hello"}.
 
 # Не предназнчен для извлечения отдельных элементов по индексу или ключу.
 
-# Как добавить новый элемент в конец:
+# Как добавить новый элемент в конец: #он не добавляется в конец. Элементы в сете же в разнобой, правда?
 test_set.add("New element")
 
 # Как удалить элемент по значению:
