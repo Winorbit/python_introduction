@@ -233,12 +233,12 @@ class OptionalBoss(Mob, Character):
 Поэтому здесь мы получим ошибку из-за неверного колличества аргументов.
 """
 some_boss = OptionalBoss("N7 Armor", "Dragon Slayer Sword","Boss")
-print(some_boss.agrresive)
+print(some_boss.aggression)
 
 
 class OptionalBoss(Character, Mob):
 	def __init__(self, name, armor_type, weapon_type):
-		self.name = weapon_type
+		self.name = name
 		self.armor = armor_type
 		self.weapon = weapon_type
 
@@ -246,10 +246,10 @@ class OptionalBoss(Character, Mob):
 		self.aggression = True
 
 # А вот так, поменяв родителей местами, все выйдет:
-boss = OptionalBoss("N7 Armor", "Dragon Slayer Sword","Boss")
+boss = OptionalBoss("Boss","N7 Armor","Dragon Slayer Sword")
 print(boss.aggression)
 
 
-class OptionalBoss(Character, Mob):
+class OptionalBoss(Character, Mob): 
 	pass
 
