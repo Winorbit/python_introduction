@@ -12,6 +12,7 @@ add_title - позволяет изменить значение атрибут�
 from datetime import datetime
 now = datetime.now()
 
+
 class BlogPost:
 	title = ""
 	text = ""
@@ -30,26 +31,39 @@ class BlogPost:
 
 	def add_title(self, title):
 		self.title = title
+
+
+
 # Из класса BlogPost создаем объект BlogPost()
 post_about_pandas = BlogPost()
 
+# BlogPost()
+# BlogPost().add_text("Любой текст поста про панд")
+# BlogPost()
+
+
+# print(post_about_pandas.title)
+# print(post_about_pandas.text)
+# print(post_about_pandas.date)
+
+
 # Меняем значения его атрибутов с помощью его же методов.
-post_about_pandas.add_text("Любой текст поста про панд")
-post_about_pandas.add_title("Просто заголовок")
+# post_about_pandas.add_text("Любой текст поста про панд")
+# post_about_pandas.add_title("Просто заголовок")
 
 
-print(post_about_pandas.title)
-print(post_about_pandas.text)
-print(post_about_pandas.date)
+# print(post_about_pandas.title)
+# print(post_about_pandas.text)
+# print(post_about_pandas.date)
 
 
-post_about_cowboy_beebop = BlogPost()
-post_about_cowboy_beebop.add_text("один из множеста текстов про то, какое выдающееся аниме 'Ковбой Бибоп'")
-post_about_cowboy_beebop.add_title("Real Folk Blues")
+# post_about_cowboy_beebop = BlogPost()
+# post_about_cowboy_beebop.add_text("один из множеста текстов про то, какое выдающееся аниме 'Ковбой Бибоп'")
+# post_about_cowboy_beebop.add_title("Real Folk Blues")
 
-print(post_about_cowboy_beebop.title)
-print(post_about_cowboy_beebop.text)
-print(post_about_cowboy_beebop.date)
+# print(post_about_cowboy_beebop.title)
+# print(post_about_cowboy_beebop.text)
+# print(post_about_cowboy_beebop.date)
 
 
 # Теперь создадим новый класс Lesson, из которого можно создавать объекты Уроков.
@@ -68,13 +82,15 @@ class Lesson:
 	def add_usefull_links(self, link):
 		self.usefull_links.append(link)
 
-classes_inheritance = Lesson()
-classes_inheritance.add_title("ООП в Python. Наследование")
-classes_inheritance.add_text("Урок о наследовании в ООП и Python в частности")
+# Lesson().add_usefull_links("Hello")
+# Lesson().add_usefull_links("Bye")
+# classes_inheritance = Lesson()
+# classes_inheritance.add_title("ООП в Python. Наследование")
+# classes_inheritance.add_text("Урок о наследовании в ООП и Python в частности")
 
-print(classes_inheritance.title)
-print(classes_inheritance.text)
-print(classes_inheritance.date)
+# print(classes_inheritance.title)
+# print(classes_inheritance.text)
+# print(classes_inheritance.date)
 
 
 # НАСЛЕДОВАНИЕ
@@ -96,20 +112,20 @@ class BaseTextModel:
 class BlogPost(BaseTextModel):
 	pass
 
-test_empty_post = BlogPost()
-print(test_empty_post.title)
-print(test_empty_post.text)
-print(test_empty_post.date)
+# test_empty_post = BlogPost()
+# print(test_empty_post.title)
+# print(test_empty_post.text)
+# print(test_empty_post.date)
 
 
 
-post_about_cowboy_beebop = BlogPost()
-post_about_cowboy_beebop.add_text("один из множеста текстов про то, какое выдающееся аниме 'Ковбой Бибоп'")
-post_about_cowboy_beebop.add_title("Real Folk Blues")
+# post_about_cowboy_beebop = BlogPost()
+# post_about_cowboy_beebop.add_text("один из множеста текстов про то, какое выдающееся аниме 'Ковбой Бибоп'")
+# post_about_cowboy_beebop.add_title("Real Folk Blues")
 
-print(post_about_cowboy_beebop.title)
-print(post_about_cowboy_beebop.text)
-print(post_about_cowboy_beebop.date)
+# print(post_about_cowboy_beebop.title)
+# print(post_about_cowboy_beebop.text)
+# print(post_about_cowboy_beebop.date)
 
 
 """
@@ -130,12 +146,12 @@ class BlogPost(BaseTextModel):
 		post["author"] = self.author
 		return post
 
-post_about_cowboy_beebop = BlogPost()
-post_about_cowboy_beebop.add_text("один из множеста текстов про то, какое выдающееся аниме 'Ковбой Бибоп'")
-post_about_cowboy_beebop.add_title("Real Folk Blues")
+# post_about_cowboy_beebop = BlogPost()
+# post_about_cowboy_beebop.add_text("один из множеста текстов про то, какое выдающееся аниме 'Ковбой Бибоп'")
+# post_about_cowboy_beebop.add_title("Real Folk Blues")
 
-post_as_dict = post_about_cowboy_beebop.post_as_dict()
-print(post_as_dict)
+# post_as_dict = post_about_cowboy_beebop.post_as_dict()
+# print(post_as_dict)
 
 
 
@@ -147,12 +163,12 @@ class Lesson(BaseTextModel):
 		lesson["text"] = self.text
 		return lesson
 
-classes_inheritance = Lesson()
-classes_inheritance.add_title("ООП в Python. Наследование")
-classes_inheritance.add_text("Урок о наследовании в ООП и Python в частности")
+# classes_inheritance = Lesson()
+# classes_inheritance.add_title("ООП в Python. Наследование")
+# classes_inheritance.add_text("Урок о наследовании в ООП и Python в частности")
 
-lesson_as_dict = classes_inheritance.lesson_as_dict()
-print(lesson_as_dict)
+# lesson_as_dict = classes_inheritance.lesson_as_dict()
+# print(lesson_as_dict)
 
 """
 Наследование может иметь сколь угодно длинную цепочку.
@@ -161,16 +177,17 @@ Lesson унаследован от BaseTextModel и имеет все его м�
 и от BaseTextModel и от Lesson.
 """
 
+
 class SpecialLesson(Lesson):
 	def add_interpreteor_block_in_code(self):
 		pass
 
-epic_lesson = SpecialLesson()
-epic_lesson.add_title("ООП в Python. Наследование")
-epic_lesson.add_text("Урок о наследовании в ООП и Python в частности")
+# epic_lesson = SpecialLesson()
+# epic_lesson.add_title("ООП в Python. Наследование")
+# epic_lesson.add_text("Урок о наследовании в ООП и Python в частности")
 
-epic_lesson_as_dict = epic_lesson.lesson_as_dict()
-print(epic_lesson_as_dict)
+# epic_lesson_as_dict = epic_lesson.lesson_as_dict()
+# print(epic_lesson_as_dict)
 
 """
 Множесственное наследование.
@@ -198,9 +215,14 @@ class Character(NPC):
 	def start_dialog(self):
 		pass
 
+ivan = Character("Ivan Drago")
+rocky = Character("Rocky Balboa")
 
-dealer = Character("Sidorovich")
-print(dealer.name)
+print(ivan.name, rocky.name)
+
+
+# dealer = Character("Sidorovich")
+# print(dealer.name)
 
 """
 Простое наследование. 
@@ -217,6 +239,7 @@ class Mob(NPC):
 	def attack(self):
 		pass
 
+
 """
 А здесь зададим класс опционального босса.
 Это неигровой персонаж, которого можно атаковать, и тогда он 
@@ -232,8 +255,9 @@ class OptionalBoss(Mob, Character):
 а значит именно этот __init__() будет использован, по правилам множественного наследования.
 Поэтому здесь мы получим ошибку из-за неверного колличества аргументов.
 """
-some_boss = OptionalBoss("N7 Armor", "Dragon Slayer Sword","Boss")
-print(some_boss.agrresive)
+# some_boss = OptionalBoss("N7 Armor", "Dragon Slayer Sword","Boss")
+# print(some_boss.agrresive)
+
 
 
 class OptionalBoss(Character, Mob):
@@ -246,8 +270,8 @@ class OptionalBoss(Character, Mob):
 		self.aggression = True
 
 # А вот так, поменяв родителей местами, все выйдет:
-boss = OptionalBoss("N7 Armor", "Dragon Slayer Sword","Boss")
-print(boss.aggression)
+# boss = OptionalBoss("N7 Armor", "Dragon Slayer Sword","Boss")
+# print(boss.aggression)
 
 
 class OptionalBoss(Character, Mob):

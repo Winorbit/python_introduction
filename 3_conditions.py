@@ -4,13 +4,19 @@
 if превращает все, что справа от него в True либо False.
 Если True - едем дальше, если False - операция заканчиваеться.
 """
+
 name = "Rick Decard"
 city = "NeoTokyo"
+
+print(2 == 2)
 
 if name == "Rick Decard":
 	print("equal is True")
 
+
+
 # else перехватывает операцию, если условие if не проходит.
+
 if name == "Rick Decard":
 	print("equal is True")
 else:
@@ -22,15 +28,15 @@ or - всего одно из условий может сработать.
 and - сработать должны условия справа и слева от and.
 or/and могут использоваться в связке:
 """
-if name == "Rick Decard" and city == "NonLonDon":
-	print("Welcome to NonLonDon, Rick!")
-else:
-	print("Hello Decard!")
+# if name == "Rick Decard" and city == "NonLonDon":
+# 	print("Welcome to NonLonDon, Rick!")
+# else:
+# 	print("Hello Decard!")
 
-if name == "Rick Decard" or city == "NonLonDon":
-	print("Welcome to NonLonDon, Rick!")
-else:
-	print("Hello Decard!")
+# if name == "Rick Decard" or city == "NonLonDon":
+# 	print("Welcome to NonLonDon, Rick!")
+# else:
+# 	print("Hello Decard!")
 
 """
 Условия могут быть вложенными сколько угодно раз.
@@ -47,22 +53,22 @@ admin = {"name": "FF.t",
 		"is_admin": True}
 
 
-if type(user) == dict:
-	# пустой словарь - {} в условиях превращаеться в False а имеющий хоть какой-то значение - True.
-	# поэтому вместо if user == True можно поставить просто if user.
-	if user:
-		if user.get("is_admin"):
-			print("Multiple checking is done!")
-	if not user:
-		if user.get("is_admin"):
-			print("Multiple checking is done!")
+# if type(user) == dict:
+#     # пустой словарь - {} в условиях превращаеться в False а имеющий хоть какой-то значение - True.
+#     # поэтому вместо if user == True можно поставить просто if user.
+#     if user:
+#         if user.get("is_admin"):
+#             print("Multiple checking is done!")
+#     if not user:
+#         if user.get("is_admin"):
+#             print("Multiple checking is done!")
 
 
-if type(admin) == dict:
-	if admin:
-		if admin.get("is_admin"):
-			print("Multiple checking is done!")
-	if not admin:
-		if admin.get("is_admin"):
-			print("Multiple checking is done!")
+# if type(admin) == dict:
+# 	if admin:
+# 		if admin.get("is_admin"):
+# 			print("Multiple checking is done!")
+# 	if not admin:
+# 		if admin.get("is_admin"):
+# 			print("Multiple checking is done!")
 
