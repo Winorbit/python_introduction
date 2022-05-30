@@ -79,6 +79,40 @@ user["phones"]["sim1"]["operator"] = "New operator"
 #удалим номер с симки 2
 del user["phones"]["sim1"]["phone_number"]
 
+"""
+Окей, теперь посмотрим, как мы можем применить это для нашего бота. Мы уже использовали для описания переменные,
+теперь же попробуем применить наши нынешние знания.
+"""
+
+# Опишем юзера нашего бота
+
+{"user_name" : "Egor"
+"user_id" : 34253234234
+"user_level" : 1}
+
+# А скорее даже так
+
+user = {"username" : "Egor"
+		"id" : 34253234234
+		"level" : 1}
+
+#Гораздо корректне положить слово в сообщение
+message = {"user_id": 223434343,
+			"message_text": "hello"}
+
+# Сделаем сообщение исходящим от нашего объявленного юзера
+message = {"user_id": user.get("id"),
+			"message_text": "hello"}
+
+
+# Теперь опишем предложения, которые мы должны выдать нашему пользователю в ответ на сообщение
+{"text" : "The man in black fled across the desert, and the gunslinger followed."
+"level" : 1}
+
+{"text" : "I learned very early the difference between knowing the name of something and knowing something."
+"level" : 2}
+
+# Теперь вопрос - как мы упакуем эти предложения в одну коробочку?
 
 ####################### СПИСКИ ###########################
 """ 
@@ -173,6 +207,15 @@ songs.insert(2222, "New element")
 another_songs = [{"artist":"Порнофильмы", "name": "Мы вам не верим", "band": True},
 				 {"artist":"ДДТ", "name": "Не стреляй!", "band":True}]
 # print(songs + another_songs)
+
+
+
+# Теперь опишем предложения, которые мы должны выдать нашему пользователю в ответ на сообщение
+
+sentences = [{"text" : "The man in black fled across the desert, and the gunslinger followed."
+			  "level" : 1},
+			 {"text" : "I learned very early the difference between knowing the name of something and knowing something."
+			  "level" : 2}]
 
 
 

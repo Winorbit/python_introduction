@@ -145,3 +145,25 @@ print(float(int("56")))
 print(str(float("96.0")))
 
 # print(value)
+
+
+#---------------
+# Опишем юзера нашего бота
+user_name = "Egor"
+user_id = 34253234234
+user_level = 1
+
+# Слово, которое он отправляет
+input_word = "dessert"
+
+#Гораздо корректне положить слово в сообщение
+
+message_text = "dessert"
+message_from = user_id #
+
+# Теперь опишем предложения, которые мы должны выдать нашему пользователю в ответ на сообщение
+sentence_1_text = "The man in black fled across the desert, and the gunslinger followed."
+sentence_1_level = 1
+
+sentence_2_text = "I learned very early the difference between knowing the name of something and knowing something."
+sentence_2_level = 2

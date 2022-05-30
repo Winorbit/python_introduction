@@ -101,15 +101,47 @@ result = say_hello("MyName")
    (во многом еще потому, что камелкейс применяется для именования классов в Питоне, о чем мы поговорим позднее)
 """
 
-
-
 # res = (lambda x:x*2)(4)
 # print(res)
 
+# Попробуем применить функции для того, чтобы сделать наш код с прошлых лекций более гибким
+
+user = {"username" : "Egor"
+		"id" : 34253234234
+		"level" : 1}
+
+# Вот сообщение от него:
+message = {"user": user,
+		   "message_text": "hello"}
+
+sentences = [{"text": "We're not gonna take it. \n Oh no, we ain't gonna take it \nWe're not gonna take it anymore", 
+			  "level": 1},
+			  {"text":"I learned very early the difference between knowing the name of something and knowing something.", 
+			  "level": 2}]
 
 
-def say_hello(name):
-	def say_goodbye(name):
-		result = f"Goodbye {name}"
-		return result
-	return say_goodbye(name)
+def print_answer(message):
+	user_level = message.get(user).get("level")
+	word = message.get("text")
+
+	for sentence in sentences:
+		if user_level >= sentence.get("level"):
+			if word in sentence.get("text"):
+				print(sentence)
+
+
+print_answer(message)
+
+def get_matches(message:dict):
+	result_sentences = []
+	user_level = message.get(user).get("level")
+	word = message.get("text")
+
+	for sentence in sentences:
+		if user_level >= sentence.get("level"):
+			if word in sentence.get("text"):
+				result_sentences.append(sentence.get("text"))
+
+	return result_sentences
+
+get_matches(message)

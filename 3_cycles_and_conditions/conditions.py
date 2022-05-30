@@ -8,19 +8,19 @@ if превращает все, что справа от него в True либ
 name = "Rick Decard"
 city = "NeoTokyo"
 
-print(2 == 2)
+# print(2 == 3)
 
-if name == "Rick Decard":
-	print("equal is True")
+# if name == "Rick Decard":
+# 	print("equal is True")
 
 
 
 # else перехватывает операцию, если условие if не проходит.
 
-if name == "Rick Decard":
-	print("equal is True")
-else:
-	print("equal is False")
+# if name == "Rick Decard":
+# 	print("equal is True")
+# else:
+# 	print("equal is False")
 
 """
 Условия могут быть многочисленными, соедененными через or или and. 
@@ -44,31 +44,25 @@ or/and могут использоваться в связке:
 Если нет - перехватываем и там обрабатываем другими условиями.
 """
 
-user = {"name": "Alex",
-		"age": 44,
-		"is_admin": False}
+# Соответственно, мы можем использовать условия для подбора подохдящих предложений.
 
-admin = {"name": "FF.t",
-		"age": 25,
-		"is_admin": True}
+# Вот наш юзер, с его уровнем:
+user = {"username" : "Egor",
+		"id" : 34253234234,
+		"level" : 1}
 
+# Вот сообщение от него:
+message = {"user": user,
+		   "message_text": "not"}
 
-# if type(user) == dict:
-#     # пустой словарь - {} в условиях превращаеться в False а имеющий хоть какой-то значение - True.
-#     # поэтому вместо if user == True можно поставить просто if user.
-#     if user:
-#         if user.get("is_admin"):
-#             print("Multiple checking is done!")
-#     if not user:
-#         if user.get("is_admin"):
-#             print("Multiple checking is done!")
+sentences = [{"text": "We're not gonna take it. \n Oh no, we ain't gonna take it \nWe're not gonna take it anymore", 
+			  "level": 1},
+			  {"text":"I learned very early the difference between knowing the name of something and knowing something.", 
+			  "level": 2}]
 
 
-# if type(admin) == dict:
-# 	if admin:
-# 		if admin.get("is_admin"):
-# 			print("Multiple checking is done!")
-# 	if not admin:
-# 		if admin.get("is_admin"):
-# 			print("Multiple checking is done!")
+sentence = sentences[1]
 
+if message.get("user").get("level") >= sentence.get("level"):
+	if message.get("message_text") in sentence.get("text"):
+		print(sentence)
