@@ -213,3 +213,57 @@ while x < 10:
 Этот цикл подоходит если нужно, например, 
 постоянно слать запросы на какой-то удаленный источник и реагировать на изменения.
 """
+
+
+
+
+
+##################################################################
+Практическая:
+
+имея список предложений
+юзера
+месседж
+
+сделать код для принта сообщения
+- вытаскивать исключительно тексты.
+- 3 случая
+- генерить новый список. 
+
+
+
+user = {"username" : "Egor",
+		"id" : 34253234234,
+		"level" : "easy"}
+
+
+# Вот сообщение от него:
+message = {"user": user,
+		   "message_text": "take"}
+
+
+sentences = [{"text": "We're not gonna take it. \n Oh no, we ain't gonna take it \nWe're not gonna take it anymore", 
+			  "level": "easy"},
+			  {"text":"I learned very early the difference between knowing the name of something and knowing something.", 
+			  "level": 2}]
+###############################################3
+
+res = []
+
+for sentence in sentences:
+	if message.get("user").get("level") == sentence.get("level"):
+		if message.get("message_text") in sentence.get("text"):
+			print(sentence)
+			res.append(sentence.text)
+
+message = ""
+no_matches_message = "sorry, not found sentences for you"
+
+if len(res) == 0:
+	# if not res
+	result_message = no_matches_message
+if len(result_message) == 1:
+	print message
+if len > 1:
+	for s in res:
+		result_message+=s
