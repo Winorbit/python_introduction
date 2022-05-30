@@ -108,7 +108,7 @@ for x in movies:
 		russel_crow_movies.append(x)
 
 # Список был изменен и теперь доступен в обновленном виде
-# print("Russel Crow movies:  ",russel_crow_movies)
+# print("Russel Crow movies:  ", russel_crow_movies)
 
 
 # Выполнение цикла можно прервать ключевым словом break.
@@ -147,6 +147,8 @@ for sentence in sentences:
 # 	print(x)
 # 	if x == 5:
 # 		break
+
+#continue
 
 
 """
